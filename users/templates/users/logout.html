@@ -1,0 +1,13 @@
+{% extends "myapp/header.html" %}
+{% block content %}
+    <h2>Do you want to logout?</h2>
+    <div class="border-top pt-3"  style="min-height:65vh;">
+        <form method="post" action="{% url 'users:logout' %}">
+            {% csrf_token %}
+            <button type="submit">logout</button>
+        </form>
+        <small class="text-muted">
+            <a href="{% url 'users:login' %}">Log In Again</a>
+        </small>
+    </div>
+{% endblock content %}
