@@ -70,6 +70,3 @@ This is a Django-based blog site with various features including user authentica
 This project is licensed under the [MIT License](LICENSE).
 
 Feel free to contribute to the project or use it as a template for your own Django-based blog site! If you encounter any issues or have suggestions for improvements, please open an issue on GitHub. Thank you for checking out the project!
-
-   
-
