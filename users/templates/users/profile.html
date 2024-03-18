@@ -7,6 +7,15 @@
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="media">
+            {% if user.username == form.instance.username %}
+                <input id="id_image" type="file" name="image" hidden/>
+                <label for="id_image">
+                        <img class="rounded-circle account-img profile-image" 
+                            style="cursor: pointer;" src="{{ form.instance.image.url }}" title="Upload new image">
+                </label>
+            {% else %}
+                <img class="rounded-circle account-img profile-image" src="{{ form.instance.image.url }}">
+            {% endif %}
             <div class="media-body">
                 <h2 class="account-heading">{{ form.instance.username }}
                     <small class="text-muted">({{ form.instance.status }})</small>
@@ -31,7 +40,7 @@
                 {{ form.email|as_crispy_field }}
                 {{ form.description|as_crispy_field }}
 
-                <a href="/">Change password?</a>
+                <a href="{% url 'users:password_change' %}">Change password?</a>
             </fieldset>
             <div class="form-group">
                 <button class="btn btn-outline-info" type="submit">Update</button>

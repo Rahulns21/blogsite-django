@@ -20,7 +20,7 @@
                 Need An Account? <a class="" href="{% url 'users:register' %}">Sign Up Now</a>
             </small><br>
             <small class="text-muted">
-                <a href="/">Forgot password?</a>
+                <a href="{% url 'users:password_reset' %}">Forgot password?</a>
             </small>
         </div>
     </div>

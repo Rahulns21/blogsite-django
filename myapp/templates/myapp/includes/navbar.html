@@ -15,9 +15,17 @@
                 <a class="nav-item nav-link" href="/">About</a>
             </div>
             {% if user.is_authenticated %}
+                {% if user.is_superuser %}
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="{% url 'myapp:post-create' %}">New Post</a>
+                    <a class="nav-item nav-link" href="{% url 'myapp:series-create' %}">New Series</a>
+                    <a class="nav-item nav-link" href="{% url 'myapp:newsletter' %}">Send Email</a>
+                    <a class="nav-item nav-link" href="{% url 'admin:index' %}">Admin</a>
+                </div>
+                {% endif %}
                 <!--NavBar Logout-->
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="{% url 'users:profile' user.username %}">
+                    <a class="nav-item nav-link" href="{% url "users:profile" user.username %}">
                         {{user.username}} <i class="fas fa-user"></i>
                     </a>
                     <a class="nav-item nav-link" href="{% url "users:logout" %}">
