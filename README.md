@@ -56,13 +56,12 @@ This is a Django-based blog site with various features including user authentica
    python manage.py runserver
    ```
 7. Open your web browser and navigate to http://127.0.0.1:8000 to view the site.
-   ## Usage
 
-```markdown
+## Usage
+
 - Visit the homepage to view existing blog posts and sign up or log in to create your own posts.
 - Administrators can access the admin panel by visiting `http://127.0.0.1:8000/admin` and log in with their superuser credentials.
 - In the admin panel, administrators can manage blog posts, send newsletters, and edit user profiles.
-```
 
 ## Contributors
 - [Rahul NS](https://github.com/Rahulns21) - Developer
