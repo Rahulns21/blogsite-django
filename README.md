@@ -4,12 +4,11 @@ This is a Django-based blog site with various features including user authentica
 
 ## Features
 
-```markdown
 - **User Authentication**: Users can sign up and log in to the site securely.
 - **Blog Post Management**: Only administrators can create, update, and delete blog posts.
 - **Newsletter Sending**: Administrators have the capability to send newsletters to all users.
 - **Profile Editing**: Users can edit their profiles to update information such as their name, email, and profile picture.
-```
+
 ## Technologies Used
 
 - **Django**: The web framework used for building the site.
@@ -32,9 +31,10 @@ This is a Django-based blog site with various features including user authentica
  2. Activate the virtual environment.
 
      On Windows:
-    ```
+    ```bash
     venv\Scripts\activate
     ```
+    
      On macOS and Linux:
     ```
     source venv/bin/activate
